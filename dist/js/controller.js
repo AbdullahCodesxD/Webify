@@ -69,9 +69,7 @@ const saveFunction = function () {
   if (currTool === "head" || currTool === "para") {
     // Updating Color for headings and paragraphs
     // model.updateTypoColors();
-    // console.log(ez);
     const colorCSS = model.updateColorOfEl();
-    console.log(colorCSS);
     // Updating Font-Size for current tool
     const newCSS = editorView.updateFontCss(model.updateFontCss);
     editorView.updateCSS(newCSS);

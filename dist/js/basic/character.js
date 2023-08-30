@@ -3,7 +3,6 @@ const characterChanger = function () {
   const changingSpan = document
     .querySelector('.main__heading')
     ?.querySelector('span');
-  console.log(changingSpan);
   if (!changingSpan) return;
   const spanAttr = changingSpan.dataset.arr.split(',');
   const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';

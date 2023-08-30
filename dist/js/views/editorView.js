@@ -269,7 +269,7 @@ class editorView extends View {
                 <div class="container__left">
                   <div class="top_1"
                     ><h3>EXPERIENCE A HIGHER FORM OF STREET WEAR</h3>
-                    <p
+                    <p class="lead"
                       >Oceans Gallery is a luxury fashion brand that creates
                       organic pieces of streetwear designed to inspire, empower,
                       and express. At the core of our work is the belief that
@@ -281,7 +281,7 @@ class editorView extends View {
                     <img src="./Extra/pro1/eight.jfif" alt="" />
                     <div class="cuntent">
                       <h3>Social</h3>
-                      <p>
+                      <p class="lead">
                         At Oceans Gallery, our team aims to push fashion further
                         than its perceived boundaries. So while we do offer
                         T-shirts that are high quality and pleasing to the eye,
@@ -301,7 +301,7 @@ class editorView extends View {
                         >STYLE IS MORE THAN THE CLOTHES WE WEAR. IT IS AN
                         INTIMATE EXPRESSION OF WHO WE ARE</h3
                       >
-                      <p
+                      <p class="lead"
                         >Oceans Gallery is a luxury fashion brand that creates
                         organic pieces of streetwear designed to inspire,
                         empower, and express. At the core of our work is the
@@ -449,7 +449,6 @@ class editorView extends View {
       z-index: 1;
     }
     .grid .middle h2 {
-      font-size: 22px;
       line-height: 1.3;
     }
     .grid .right {
@@ -521,7 +520,6 @@ class editorView extends View {
       position: absolute;
       top: 30%;
       left: 10%;
-      font-size: 26px;
       text-shadow: -35px -12px #eae5cb;
     }
     .slider__heading:after {
@@ -631,7 +629,6 @@ class editorView extends View {
     #custom__7 h2 {
       text-align: center;
       position: relative;
-      font-size: 30px;
     }
     
     #custom__7 img {
@@ -686,7 +683,6 @@ class editorView extends View {
     #custom__7 .container__left .top_1 h3,
     .cuntent h3,
     .cuntent__1 h3 {
-      font-size: 24px;
       line-height: 37px;
       font-weight: 500;
       margin-bottom: 20px;
@@ -695,9 +691,11 @@ class editorView extends View {
       margin-top: 25px;
       /* margin */
     }
-    #custom__7 p {
+    #custom__7 .lead {
       line-height: 1.6;
       color: #363636;
+    }
+    section .lead {
       font-size: 15px;
     }
     .container__left img {
@@ -759,7 +757,9 @@ class editorView extends View {
       position: relative;
       display: flex;
       flex-direction: column;
-      font-size: 30px;
+    }
+    section h3{
+      font-size: 20px;
     }
     .book {
       position: relative;
@@ -810,7 +810,9 @@ class editorView extends View {
       height: 400px;
       object-fit: cover;
     }
-    
+    section h2{
+      font-size:22px
+    }
     `,
     ],
     // Second one
@@ -969,7 +971,7 @@ class editorView extends View {
       <nav class="py-1">
         <div class="container">
             <div class="logo">
-                <h2>Logo</h2>
+                <h4>Logo</h4>
             </div>
             <div class="links">
                 <li class="link"><a href="main.html">Home</a></li>
@@ -982,10 +984,10 @@ class editorView extends View {
         <div class="container">
             <div class="left">
                 <div class="content">
-                    <h2>
+                    <h1>
                         All-In-One Business Software Solution To Dominate Local Businesses
-                    </h2>
-                    <p class="lead">
+                    </h1>
+                    <p class="main-para">
 
                         Looking for a business software platform that can help you manage your digital strategy and grow
                         your business?
@@ -1015,8 +1017,8 @@ class editorView extends View {
                 <div class="work">
                     <img src="./Extra/pro-3/work-1.jpg" alt="" class="work-img">
 
-                    <h4>Seo (Search Engine Optimization)</h4>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione autem tempora minima sapiente
+                    <h3>Seo (Search Engine Optimization)</h3>
+                    <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione autem tempora minima sapiente
                         velit repellendus. Laudantium molestias voluptates perspiciatis iste, quod soluta quaerat minus
                         quasi repellendus sit cum qui necessitatibus.</p>
 
@@ -1024,8 +1026,8 @@ class editorView extends View {
                 </div>
                 <div class="work">
                     <img src="./Extra/pro-3/work-2.jpg" alt="" class="work-img">
-                    <h4>SMM (Social Media Marketing)</h4>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione autem tempora minima sapiente
+                    <h3>SMM (Social Media Marketing)</h3>
+                    <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione autem tempora minima sapiente
                         velit repellendus. Laudantium molestias voluptates perspiciatis iste, quod soluta quaerat minus
                         quasi repellendus sit cum qui necessitatibus.</p>
 
@@ -1033,8 +1035,8 @@ class editorView extends View {
                 </div>
                 <div class="work">
                     <img src="./Extra/pro-3/work-3.jpg" alt="" class="work-img">
-                    <h4>Web Design & Development</h4>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione autem tempora minima sapiente
+                    <h3>Web Design & Development</h3>
+                    <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione autem tempora minima sapiente
                         velit repellendus. Laudantium molestias voluptates perspiciatis iste, quod soluta quaerat minus
                         quasi repellendus sit cum qui necessitatibus.</p>
 
@@ -1042,8 +1044,8 @@ class editorView extends View {
                 </div>
                 <div class="work">
                     <img src="./Extra/pro-3/work-4.jpg" alt="" class="work-img">
-                    <h4>PPC (Pay Per Click)</h4>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione autem tempora minima sapiente
+                    <h3>PPC (Pay Per Click)</h3>
+                    <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione autem tempora minima sapiente
                         velit repellendus. Laudantium molestias voluptates perspiciatis iste, quod soluta quaerat minus
                         quasi repellendus sit cum qui necessitatibus.</p>
 
@@ -1051,8 +1053,8 @@ class editorView extends View {
                 </div>
                 <div class="work">
                     <img src="./Extra/pro-3/work-5.jpg" alt="" class="work-img">
-                    <h4>Lead Generation</h4>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione autem tempora minima sapiente
+                    <h3>Lead Generation</h3>
+                    <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione autem tempora minima sapiente
                         velit repellendus. Laudantium molestias voluptates perspiciatis iste, quod soluta quaerat minus
                         quasi repellendus sit cum qui necessitatibus.</p>
 
@@ -1060,8 +1062,8 @@ class editorView extends View {
                 </div>
                 <div class="work">
                     <img src="./Extra/pro-3/work-6.jpg" alt="" class="work-img">
-                    <h4>Content Writing</h4>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione autem tempora minima sapiente
+                    <h3>Content Writing</h3>
+                    <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione autem tempora minima sapiente
                         velit repellendus. Laudantium molestias voluptates perspiciatis iste, quod soluta quaerat minus
                         quasi repellendus sit cum qui necessitatibus.</p>
 
@@ -1082,7 +1084,7 @@ class editorView extends View {
 
                     <img src="./Extra/pro-3/work-1.jpg" alt="" class="img-blog">
 
-                    <h4 class="text-align">Blog Title</h4>
+                    <h3 class="text-align">Blog Title</h3>
 
                     <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam odio minus
                         accusantium placeat id quas officia est saepe quibusdam omnis.</p>
@@ -1093,7 +1095,7 @@ class editorView extends View {
 
                     <img src="./Extra/pro-3/work-6.jpg" alt="" class="img-blog">
 
-                    <h4 class="text-align">Blog Title</h4>
+                    <h3 class="text-align">Blog Title</h3>
 
                     <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam odio minus
                         accusantium placeat id quas officia est saepe quibusdam omnis.</p>
@@ -1132,7 +1134,7 @@ class editorView extends View {
         <div class="container">
             <div class="grid">
                 <div class="address">
-                    <h2>LOGO</h2>
+                    <h3>LOGO</h3>
 
                     <p class="lead">
                         Address: 123 USA <br> Atlanta,GA 4567
@@ -1323,12 +1325,13 @@ nav {
         justify-content: center;
         width: 100%;
         height: 100%; }
-        #header .container .left .content h2 {
+        #header .container .left .content h1 {
           width: 100%;
           line-height: 1.1;
           font-size: 2rem;
           margin-bottom: 1rem; }
-        #header .container .left .content .lead {
+        #header .container .left .content .main-para {
+          font-size:16px;
           width: 89%; }
         #header .container .left .content .btn-dark {
           margin-top: 15px;
@@ -1365,10 +1368,10 @@ nav {
         display: block;
         margin: 0px auto 30px auto;
         border-radius: 5px 100px 5px 100px; }
-      #work .container .grid .work h4 {
+      #work .container .grid .work h3 {
         text-align: center;
         margin-bottom: 30px; }
-      #work .container .grid .work p {
+      #work .container .grid .work .lead {
         margin-bottom: 30px;
         line-height: 1.5; }
       #work .container .grid .work .btn-light {
@@ -1396,7 +1399,7 @@ nav {
       #blogs .container .grid .blog .read-more:hover {
         text-decoration-color: transparent; }
   #blogs .container .grid .lead {
-    width: 350px; }
+    width: 350px;}
   #blogs .container .grid .img-blog {
     width: 350px;
     height: 250px;
@@ -1410,14 +1413,15 @@ nav {
     font-size: 2rem;
     margin-bottom: 40px; }
   #action .container .lead {
-    margin-bottom: 50px; }
+    margin-bottom: 50px;
+  font-size:16px }
   #action .container .btn-light:hover {
     border-radius: 0; }
 
 #news .container h2 {
   font-size: 1.7rem; }
 #news .container .lead {
-  font-family: "Poppins", sans-serif; }
+  font-family: "Poppins", sans-serif;}
 #news .container .flex {
   display: flex;
   align-items: center;
@@ -1470,7 +1474,15 @@ footer {
         transition: all 0.3s ease-in-out; }
         footer .container .grid .socials i:hover {
           color: #777; }
-
+section h2{
+  font-size:2rem;
+}
+section h3{
+  font-size:18px;
+}
+section .lead{
+  font-size:16px;
+}
 #package {
   margin: 40px 0px; }
   #package .container {
@@ -1926,7 +1938,6 @@ footer {
   // Adding the css
   addCSS = function (css) {
     this._newCSS = css.join("\n");
-    console.log(this._newCSS);
     this._css.insertAdjacentHTML("beforeend", this._newCSS);
   };
   // Updating the others

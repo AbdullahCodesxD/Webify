@@ -42,8 +42,7 @@ export const updateTypoColors = function () {
 export const updateColor = function () {
   // Getting the values out of colors
   const main = Object.values(state.toolsInfo.colour[0]);
-  const second = Object.values(state.toolsInfo.colour[1]);
-  console.log(main, second);
+  const second = Object.values(state.toolsInfo.colour[1]);;
   state.main = main;
   state.second = second;
 };
@@ -78,7 +77,6 @@ const updateEl = function (cssArr, elObj) {
             // checking if the element contains the font
 
             const str = `font-size : ${value}px;`;
-            console.log(str, el[e]);
             // updatedCSS = str;
             // Returning it coz we are using map and an array is required
             return (el[e] = str);
@@ -112,7 +110,6 @@ export const updateColorOfEl = function () {
     const strArr = colorArr.map((color, i) => {
       // Which one wants which color
       if (Object.values(color)[0] === "main") {
-        console.log("hihihi");
         const color =
           main === ""
             ? ""
@@ -131,7 +128,6 @@ export const updateColorOfEl = function () {
         return color;
       }
     });
-    console.log(strArr);
     return strArr;
   }
   // IF THE CURRENT TOOL IS PARA
@@ -201,7 +197,6 @@ export const updateFontCss = function (css) {
 
     const paraArr = [main, lead];
     paraArr.forEach((para, i) => {
-      console.log(para);
       if (para === "") return;
       updatedArr = updateEl(cssArr, state.toolsInfo.para[i]).join("}");
     });
