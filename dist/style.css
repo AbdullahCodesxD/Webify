@@ -207,6 +207,15 @@ div[contenteditable] {
   text-align: center;
   width: 100%; }
 
+.comming {
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 44px;
+  color: #3a3758; }
+
 nav.hide,
 footer.hide {
   display: none; }
@@ -655,6 +664,15 @@ div[contenteditable] {
   text-align: center;
   width: 100%; }
 
+.comming {
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 44px;
+  color: #3a3758; }
+
 .description {
   position: relative;
   transition: all 0.3s ease-in-out;
@@ -1039,6 +1057,15 @@ div[contenteditable] {
   font-size: 20px;
   text-align: center;
   width: 100%; }
+
+.comming {
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 44px;
+  color: #3a3758; }
 
 #about {
   margin-top: 150px; }
