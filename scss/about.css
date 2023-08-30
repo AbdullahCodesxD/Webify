@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins&family=Lobster&family=Roboto+Condensed&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+button {
+  outline: none;
+  border: none; }
+
+a {
+  text-decoration: none; }
+
+ul,
+li {
+  list-style: none; }
+
+body {
+  background-color: #f6faff; }
+
+body::-webkit-scrollbar {
+  width: 7px;
+  background-color: #222;
+  color: red;
+  border-left: 1px solid #222; }
+
+.description > div::-webkit-scrollbar {
+  display: none; }
+
+body::-webkit-scrollbar-button {
+  display: none; }
+
+body::-webkit-scrollbar-thumb {
+  width: 7px;
+  background-color: #aaa; }
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #f4f4f4; }
+
+.container {
+  max-width: 1100px;
+  display: block;
+  margin: auto; }
+
+.editor-container {
+  max-width: fit-content;
+  display: block;
+  margin: auto; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+span,
+li {
+  font-family: "Poppins", sans-serif; }
+  h1::selection,
+  h2::selection,
+  h3::selection,
+  h4::selection,
+  h5::selection,
+  h6::selection,
+  a::selection,
+  span::selection,
+  li::selection {
+    color: #f6faff;
+    background: #222; }
+
+p {
+  font-family: "Roboto Condensed", sans-serif;
+  line-height: 1.6;
+  font-size: 17px;
+  color: #222; }
+  p::selection {
+    color: #f6faff;
+    background: #222; }
+
+.btn, .btn-main, .btn-dark {
+  padding: 15px 30px;
+  border: none;
+  outline: none;
+  transition: all 0.25s ease-in-out;
+  border-radius: 5px;
+  cursor: pointer; }
+  .btn:hover, .btn-main:hover, .btn-dark:hover {
+    background-color: #ffa500;
+    color: #f6faff; }
+
+.btn-main {
+  background: #3a3758;
+  color: #fff; }
+
+.btn-dark {
+  background: #222;
+  color: #f4f4f4; }
+
+.py-1 {
+  padding: 1rem; }
+.py-2 {
+  padding: 2rem; }
+
+.my-1 {
+  margin: 1rem; }
+.my-2 {
+  margin: 2rem; }
+
+.text-align {
+  text-align: center; }
+
+.line {
+  height: 2px;
+  width: 200px;
+  display: block;
+  margin: 20px auto;
+  background: #3a3758; }
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.Heading,
+.Paragraph {
+  position: relative;
+  width: fit-content;
+  padding: 50px; }
+
+.Heading:before {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  content: "<h1>";
+  font-style: italic;
+  color: #ccc;
+  font-size: 24px;
+  font-family: "Dancing Script", cursive;
+  font-weight: 100; }
+
+.Heading:after {
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+  content: "</h1>";
+  font-style: italic;
+  color: #ccc;
+  font-size: 24px;
+  font-family: "Dancing Script", cursive;
+  font-weight: 100; }
+
+.Paragraph:before {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  content: "<p>";
+  font-style: italic;
+  color: #ccc;
+  font-size: 24px;
+  font-family: "Dancing Script", cursive;
+  font-weight: light; }
+
+.Paragraph:after {
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+  content: "</p>";
+  font-style: italic;
+  color: #ccc;
+  font-size: 24px;
+  font-family: "Dancing Script", cursive;
+  font-weight: light; }
+
+div[contenteditable] {
+  outline: none;
+  caret-color: #ffa500; }
+
+.logo h2 {
+  font-family: "Dancing Script", cursive;
+  font-size: 34px; }
+
+.logo {
+  position: relative;
+  overflow: hidden; }
+  .logo:before {
+    position: absolute;
+    content: "";
+    height: 100px;
+    width: 100px;
+    background: none;
+    bottom: -61px;
+    left: 46px;
+    border: 4px solid #ffa500;
+    border-radius: 500px;
+    opacity: 0.6;
+    z-index: -6; }
+
+.development h2 {
+  position: fixed;
+  bottom: 0%;
+  text-transform: uppercase;
+  color: red;
+  font-size: 20px;
+  text-align: center;
+  width: 100%; }
+
+#about {
+  margin-top: 150px; }
+  #about .container .about h2 {
+    font-size: 32px;
+    color: #3a3758;
+    margin: 20px 0; }
+  #about .container .about p {
+    margin: 20px 0 50px 0; }
+  #about .container .about a {
+    font-size: 16px;
+    color: #3a3758;
+    text-decoration: underline; }
+
+@media (min-width: 1100px) {
+  #about ~ footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%; } }
+@media (max-width: 1100px) {
+  .container {
+    padding: 0px 20px; } }
+
+/*# sourceMappingURL=about.css.map */
