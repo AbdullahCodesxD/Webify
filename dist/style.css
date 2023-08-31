@@ -1530,4 +1530,39 @@ footer {
       footer .container p span {
         font-family: inherit; }
 
+@media (max-width: 800px) {
+  #home .grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    #home .grid .right {
+      display: none; }
+
+  .we__offer .container .grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0; }
+    .we__offer .container .grid .grid-item {
+      width: 100%;
+      min-height: 200px; }
+    .we__offer .container .grid .background, .we__offer .container .grid .images, .we__offer .container .grid .font-size {
+      height: 350px; }
+      .we__offer .container .grid .background .back, .we__offer .container .grid .images .back, .we__offer .container .grid .font-size .back {
+        height: 60%; }
+
+  #testimonials {
+    padding: 0px 40px; }
+    #testimonials .container .testimonials {
+      grid-template-columns: 1fr;
+      align-items: center;
+      justify-content: center; }
+
+  #check .container {
+    flex-direction: column; }
+    #check .container h2, #check .container a {
+      font-size: 22px; } }
+
 /*# sourceMappingURL=style.css.map */
