@@ -29,7 +29,8 @@ nav {
             color: $dark;
           }
           &:after {
-            transition: width 200ms ease-in-out, left 200ms ease-in-out,
+            transition: width 200ms ease-in-out,
+              left 200ms ease-in-out,
               background-color 500ms ease;
             position: absolute;
             content: "";
@@ -98,7 +99,8 @@ nav {
         content: "";
         height: 62%;
         width: 100%;
-        background: url("./img/template-images/template1.png") no-repeat;
+        background: url("./img/template-images/template1.png")
+          no-repeat;
         background-size: cover;
         background-size: 200%;
         background-position: 100% 100%;
@@ -192,7 +194,8 @@ nav {
         position: relative;
         h4 {
           position: absolute;
-          animation: font1 4s infinite alternate-reverse ease;
+          animation: font1 4s infinite
+            alternate-reverse ease;
           left: 50%;
           top: 25%;
           transform: translate(-50%);
@@ -211,7 +214,8 @@ nav {
           left: 50%;
           transform: translate(-50%);
           bottom: 10%;
-          animation: para1 4s infinite alternate-reverse ease;
+          animation: para1 4s infinite
+            alternate-reverse ease;
           opacity: 0.8;
         }
         @keyframes para1 {
@@ -226,7 +230,8 @@ nav {
       .font-color {
         grid-area: color;
         h4 {
-          animation: color1 1.5s infinite alternate-reverse ease-in;
+          animation: color1 1.5s infinite
+            alternate-reverse ease-in;
         }
         @keyframes color1 {
           from {
@@ -237,7 +242,8 @@ nav {
           }
         }
         p {
-          animation: color1 1.5s 0.8s infinite alternate-reverse ease-in;
+          animation: color1 1.5s 0.8s infinite
+            alternate-reverse ease-in;
         }
       }
       .font-family {
@@ -284,15 +290,18 @@ nav {
             }
             &:nth-child(1) {
               left: 0;
-              animation: img1 14s infinite ease-in-out;
+              animation: img1 14s infinite
+                ease-in-out;
             }
             &:nth-child(2) {
               left: 110%;
-              animation: img2 14s infinite ease-in-out;
+              animation: img2 14s infinite
+                ease-in-out;
             }
             &:nth-child(3) {
               left: 220%;
-              animation: img3 14s infinite ease-in-out;
+              animation: img3 14s infinite
+                ease-in-out;
             }
             @keyframes img1 {
               0% {
@@ -371,11 +380,13 @@ nav {
             content: "";
             height: 50%;
             width: 50%;
-            animation: anim1 0.7s infinite alternate ease-in-out;
+            animation: anim1 0.7s infinite
+              alternate ease-in-out;
             background-color: $card;
             left: 105%;
             top: 52%;
-            transform: rotate(-40deg) translate(-39%, -100%) scale(1.15);
+            transform: rotate(-40deg)
+              translate(-39%, -100%) scale(1.15);
           }
           @keyframes anim2 {
             0% {
@@ -417,7 +428,8 @@ nav {
           bottom: 5%;
           background-color: $primary;
           border-radius: 5px;
-          animation: back 5s infinite alternate-reverse ease-in-out;
+          animation: back 5s infinite
+            alternate-reverse ease-in-out;
         }
         @keyframes back {
           from {
@@ -450,7 +462,8 @@ nav {
             &:nth-child(3) {
               font-family: $primary-font;
               font-style: oblique;
-              text-decoration: line-through $primary;
+              text-decoration: line-through
+                $primary;
             }
           }
         }
@@ -610,4 +623,124 @@ footer {
     }
   }
 }
-@import 'mobile'
+// Build
+
+#build {
+  .container {
+    max-width: 1200px;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 3.5fr;
+    gap: 10px;
+    padding-top: 80px;
+    padding-bottom: 40px;
+    // background: red;
+    .left {
+      background-color: $dark;
+      position: relative;
+      border-radius: 10px 0 0 10px;
+      overflow: hidden;
+      &:before {
+        position: absolute;
+        content: "";
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0.05;
+        background: url("./img/boxes.png");
+        background-size: 7%;
+        z-index: 0;
+      }
+      .top,
+      .bottom {
+        position: relative;
+      }
+
+      .top {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 10px;
+        padding: 20px;
+        background: $primary;
+        border-bottom: 1px dotted $light;
+        button {
+          padding: 10px 20px;
+          background: $dark;
+          border-radius: 5px;
+          // border: 1px solid $light;
+          cursor: pointer;
+          width: 50%;
+          font-family: $main-font;
+          color: #f4f4f4;
+          transition: all 0.3s ease-in-out;
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+      }
+      .bottom {
+        padding: 20px;
+        color: $light;
+        font-family: $primary-font;
+        ul {
+          width: 100%;
+          font-size: 14px;
+          text-align: center;
+          li:nth-child(1) {
+            cursor: pointer;
+          }
+          li {
+            padding: 5px;
+            background-color: $primary;
+            position: relative;
+            border-bottom: 1px dotted
+              rgba(255, 255, 255, 0.2);
+
+            &:before {
+              content: ">";
+              position: absolute;
+              width: 20px;
+              height: 100%;
+              left: 5px;
+              top: 0;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              transition: all 0.3s ease-in-out;
+            }
+            li.active:before {
+              transform: rotate(90deg);
+            }
+          }
+        }
+      }
+    }
+    .right {
+      border-radius: 0 10px 10px 0;
+      border: 2px solid transparent;
+      position: relative;
+      background-color: $light;
+      &:before {
+        position: absolute;
+        content: "";
+        top: 0px;
+        left: 0;
+        transform: translate(-2.5px, -2.5px);
+        z-index: -1;
+        border-radius: inherit;
+        height: calc(100% + 5px);
+        width: calc(100% + 5px);
+        background-image: linear-gradient(
+          45deg,
+          $primary,
+          $second
+        );
+      }
+    }
+  }
+}
+
+@import "mobile";

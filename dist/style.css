@@ -1530,6 +1530,98 @@ footer {
       footer .container p span {
         font-family: inherit; }
 
+#build .container {
+  max-width: 1200px;
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 3.5fr;
+  gap: 10px;
+  padding-top: 80px;
+  padding-bottom: 40px; }
+  #build .container .left {
+    background-color: #222;
+    position: relative;
+    border-radius: 10px 0 0 10px;
+    overflow: hidden; }
+    #build .container .left:before {
+      position: absolute;
+      content: "";
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      opacity: 0.05;
+      background: url("./img/boxes.png");
+      background-size: 7%;
+      z-index: 0; }
+    #build .container .left .top,
+    #build .container .left .bottom {
+      position: relative; }
+    #build .container .left .top {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      gap: 10px;
+      padding: 20px;
+      background: #3a3758;
+      border-bottom: 1px dotted #f6faff; }
+      #build .container .left .top button {
+        padding: 10px 20px;
+        background: #222;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 50%;
+        font-family: "Poppins", sans-serif;
+        color: #f4f4f4;
+        transition: all 0.3s ease-in-out; }
+        #build .container .left .top button:hover {
+          opacity: 0.7; }
+    #build .container .left .bottom {
+      padding: 20px;
+      color: #f6faff;
+      font-family: "Roboto Condensed", sans-serif; }
+      #build .container .left .bottom ul {
+        width: 100%;
+        font-size: 14px;
+        text-align: center; }
+        #build .container .left .bottom ul li:nth-child(1) {
+          cursor: pointer; }
+        #build .container .left .bottom ul li {
+          padding: 5px;
+          background-color: #3a3758;
+          position: relative;
+          border-bottom: 1px dotted rgba(255, 255, 255, 0.2); }
+          #build .container .left .bottom ul li:before {
+            content: ">";
+            position: absolute;
+            width: 20px;
+            height: 100%;
+            left: 5px;
+            top: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease-in-out; }
+          #build .container .left .bottom ul li li.active:before {
+            transform: rotate(90deg); }
+  #build .container .right {
+    border-radius: 0 10px 10px 0;
+    border: 2px solid transparent;
+    position: relative;
+    background-color: #f6faff; }
+    #build .container .right:before {
+      position: absolute;
+      content: "";
+      top: 0px;
+      left: 0;
+      transform: translate(-2.5px, -2.5px);
+      z-index: -1;
+      border-radius: inherit;
+      height: calc(100% + 5px);
+      width: calc(100% + 5px);
+      background-image: linear-gradient(45deg, #3a3758, #ffa500); }
+
 @media (max-width: 800px) {
   #home .grid {
     display: flex;
