@@ -1,10 +1,4 @@
-import View from "./view.js";
-
-class viewHtml extends View {
-  _parent = document.querySelector(".description");
-  _HTMLObj = [
-    {
-      head: `
+import o from"./view.js";class viewHtml extends o{_parent=document.querySelector(".description");_HTMLObj=[{head:`
         <div class="headings">
                 <!-- Main Heading -->
                 <div class="parent-heading parent" data-set="mainHeading">
@@ -88,11 +82,7 @@ class viewHtml extends View {
 
                 <!-- End -->
               </div>
-        `,
-    },
-
-    {
-      para: `
+        `},{para:`
     <div class="paragraphs">
                 <!-- Main Heading -->
                 <div class="parent-paragraph parent" data-set="mainPara">
@@ -149,11 +139,7 @@ class viewHtml extends View {
 
                 <!-- End -->
               </div>
-        `,
-    },
-
-    {
-      img: `
+        `},{img:`
       <div class="images">
       <h3>Enter the url of images.</h3>
 
@@ -161,10 +147,7 @@ class viewHtml extends View {
         
       </div>
     </div>
-      `,
-    },
-    {
-      colour: `
+      `},{colour:`
       <div class="select-colors">
       <h3>Select Colors</h3>
 
@@ -172,70 +155,7 @@ class viewHtml extends View {
        
       </div>
     </div>
-      `,
-    },
-    // {
-    //   button: `
-
-    //   <div class="button-styling">
-    //       <h3>Button Styling</h3>
-    //       <div id="button-styling">
-    //         <div>
-    //           <h4>Main Button</h4>
-    //           <!-- Button Background -->
-    //           <div class="btn-bg">
-    //             <h6>Transparent Background</h6>
-    //             <input
-    //               type="checkbox"
-    //               name="transparent"
-    //               id="transparent"
-    //             />
-    //           </div>
-
-    //           <!-- Btn - border -->
-    //           <div class="btn-border">
-    //             <h6>Border</h6>
-    //             <input type="checkbox" name="border-check" id="border" />
-    //           </div>
-
-    //           <!-- Btn - text - color -->
-    //           <div class="btn-text-color">
-    //             <h6>Text Color</h6>
-    //             <input type="color" name="color" id="btn-color" />
-    //           </div>
-    //         </div>
-    //         <!--  -->
-    //         <!-- Seconday Button -->
-    //         <div>
-    //           <h4>Secondary Button</h4>
-    //           <!-- Button Background -->
-    //           <div class="btn-bg">
-    //             <h6>Transparent Background</h6>
-    //             <input
-    //               type="checkbox"
-    //               name="transparent"
-    //               id="transparent"
-    //             />
-    //           </div>
-    //           <!-- Btn - border -->
-    //           <div class="btn-border">
-    //             <h6>Border</h6>
-    //             <input type="checkbox" name="border-check" id="border" />
-    //           </div>
-
-    //           <!-- Btn - text - color -->
-    //           <div class="btn-text-color">
-    //             <h6>Text Color</h6>
-    //             <input type="color" name="color" id="btn-color" />
-    //           </div>
-    //         </div>
-    //         <!-- End -->
-    //       </div>
-    //    </div>
-    //   `,
-    // },
-    {
-      other: `
+      `},{other:`
       <div class="other-style">
           <h3>Others</h3>
 
@@ -286,26 +206,4 @@ class viewHtml extends View {
           </div>
        </div>
       
-      `,
-    },
-  ];
-
-  checkObj = function (objext) {
-    if (!this._parent) return;
-    // Checking for the obj and finding html
-    let index = 0;
-    this._HTMLObj.forEach((obj, i) => {
-      let check = false;
-      for (let key in obj) {
-        key === objext ? (check = true) : (check = false);
-      }
-      if (check) index = i;
-    });
-    // HTml
-    const html = Object.values(this._HTMLObj[index]);
-    if (!html) return;
-    this._parent.innerHTML = html;
-  };
-}
-
-export default new viewHtml();
+      `},];checkObj=function(o){if(!this._parent)return;let e=0;this._HTMLObj.forEach((i,n)=>{let a=!1;for(let l in i)a=l===o;a&&(e=n)});let i=Object.values(this._HTMLObj[e]);i&&(this._parent.innerHTML=i)}}export default new viewHtml;

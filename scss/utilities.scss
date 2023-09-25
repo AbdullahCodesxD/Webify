@@ -1,6 +1,7 @@
 // $primary: #8c92ac;
 // $primary: #4f4d7d;
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins&family=Lobster&family=Roboto+Condensed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap");
 // Colors
 $primary: #3a3758;
 $second: #ffa500;
@@ -11,11 +12,13 @@ $light: #f6faff;
 $dark: #222;
 $pseudo: #ccc;
 $primaryNav: rgba(58, 55, 88, 0.85);
+
 $gradient: 360deg, $primary 50%, transparent;
 // Fonts
 $main-font: "Poppins", sans-serif;
 $primary-font: "Roboto Condensed", sans-serif;
 $pseudo-font: "Dancing Script", cursive;
+$logo-font: "Irish Grover", cursive;
 // Utilities
 $navHeight: 72px; // Removing Default styles;
 $section-font: 30px;
@@ -210,48 +213,147 @@ p {
 div[contenteditable] {
   outline: none;
   caret-color: $second;
-}
-.logo h2 {
-  font-family: $pseudo-font;
-  font-size: 34px;
-}
-.logo {
   position: relative;
-  overflow: hidden;
   &:before {
-    position: absolute;
     content: "";
-    height: 100px;
-    width: 100px;
-    background: none;
-    bottom: -61px;
-    left: 46px;
-    border: 4px solid $second;
-    border-radius: 500px;
-    opacity: 0.6;
-    z-index: -6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #f4f4f4;
+    z-index: -1;
   }
 }
 
+.logo {
+  position: relative;
+  overflow: hidden;
+  a {
+    font-size: 32px;
+    color: transparent;
+    font-family: $logo-font;
+    background-image: linear-gradient(45deg, $primary 50%, crimson 50%);
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: 200%;
+    background-position: 50% 50%;
+    animation: anim 3000s linear infinite;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      background-image: linear-gradient(45deg, $primary 50%, $second 50%);
+    }
+  }
+  @keyframes anim {
+    from {
+      background-position: 0% 0%;
+    }
+    to {
+      background-position: 55500px;
+    }
+  }
+}
+body.dark .logo {
+  a {
+    opacity: 0.85;
+    background-image: linear-gradient(45deg, $light 50%, $second 50%);
+    &:hover {
+      background-image: linear-gradient(45deg, $light 50%, royalblue 50%);
+    }
+  }
+}
+li.toggle {
+  // background-color: red;
+  border: 1px solid $primary;
+  width: 50px;
+  height: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding: 3px 5px;
+  position: relative;
+  cursor: pointer;
+  // justify-content: center;
+  transition: all 0.25s ease-in-out;
+  div {
+    position: absolute;
+    left: 3px;
+    transition: all 0.25s ease-in-out;
+    height: 70%;
+    aspect-ratio: 1;
+    background-color: $primary;
+    border-radius: 50%;
+  }
+}
+li.toggle.dark {
+  border-color: #fff;
+  div {
+    left: calc(75% - 5px);
+    background-color: white;
+  }
+}
 // DEvelopment
-.development{
-  h2{
+.development {
+  h2 {
     // display:none
     position: fixed;
-    bottom:0%;
+    bottom: 0%;
     text-transform: uppercase;
-    color:red;
-    font-size:20px;
+    color: red;
+    font-size: 20px;
     text-align: center;
     width: 100%;
   }
 }
-.comming{
-  height:70vh;
-  width:100%;
-  display:flex;
+.comming {
+  height: 70vh;
+  width: 100%;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size:44px;
-  color:$primary
+  font-size: 44px;
+  color: $primary;
+}
+
+#codea {
+  padding: 30px;
+  .container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 85vh;
+    div {
+      display: flex;
+      margin-bottom: 40px;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      width: fit-content;
+      padding: 20px;
+      color: #f4f4f4;
+      border: 1px solid $second;
+      border-radius: 5px;
+    }
+    h4 {
+      color: #222;
+      font-weight: lighter;
+      margin-bottom: 40px;
+    }
+    p {
+      opacity: 0;
+      transition: all 0.2s ease-in-out;
+    }
+    p.done {
+      opacity: 1;
+    }
+  }
+}
+.dark {
+  #codea {
+    h4 {
+      color: $second;
+    }
+  }
 }

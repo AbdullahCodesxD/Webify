@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins&family=Lobster&family=Roboto+Condensed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -174,27 +175,70 @@ p {
 
 div[contenteditable] {
   outline: none;
-  caret-color: #ffa500; }
-
-.logo h2 {
-  font-family: "Dancing Script", cursive;
-  font-size: 34px; }
+  caret-color: #ffa500;
+  position: relative; }
+  div[contenteditable]:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #f4f4f4;
+    z-index: -1; }
 
 .logo {
   position: relative;
   overflow: hidden; }
-  .logo:before {
+  .logo a {
+    font-size: 32px;
+    color: transparent;
+    font-family: "Irish Grover", cursive;
+    background-image: linear-gradient(45deg, #3a3758 50%, crimson 50%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: 200%;
+    background-position: 50% 50%;
+    animation: anim 3000s linear infinite;
+    transition: all 0.2s ease-in-out; }
+    .logo a:hover {
+      background-image: linear-gradient(45deg, #3a3758 50%, #ffa500 50%); }
+@keyframes anim {
+  from {
+    background-position: 0% 0%; }
+  to {
+    background-position: 55500px; } }
+body.dark .logo a {
+  opacity: 0.85;
+  background-image: linear-gradient(45deg, #f6faff 50%, #ffa500 50%); }
+  body.dark .logo a:hover {
+    background-image: linear-gradient(45deg, #f6faff 50%, royalblue 50%); }
+
+li.toggle {
+  border: 1px solid #3a3758;
+  width: 50px;
+  height: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding: 3px 5px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out; }
+  li.toggle div {
     position: absolute;
-    content: "";
-    height: 100px;
-    width: 100px;
-    background: none;
-    bottom: -61px;
-    left: 46px;
-    border: 4px solid #ffa500;
-    border-radius: 500px;
-    opacity: 0.6;
-    z-index: -6; }
+    left: 3px;
+    transition: all 0.25s ease-in-out;
+    height: 70%;
+    aspect-ratio: 1;
+    background-color: #3a3758;
+    border-radius: 50%; }
+
+li.toggle.dark {
+  border-color: #fff; }
+  li.toggle.dark div {
+    left: calc(75% - 5px);
+    background-color: white; }
 
 .development h2 {
   position: fixed;
@@ -214,8 +258,43 @@ div[contenteditable] {
   font-size: 44px;
   color: #3a3758; }
 
+#codea {
+  padding: 30px; }
+  #codea .container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 85vh; }
+    #codea .container div {
+      display: flex;
+      margin-bottom: 40px;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      width: fit-content;
+      padding: 20px;
+      color: #f4f4f4;
+      border: 1px solid #ffa500;
+      border-radius: 5px; }
+    #codea .container h4 {
+      color: #222;
+      font-weight: lighter;
+      margin-bottom: 40px; }
+    #codea .container p {
+      opacity: 0;
+      transition: all 0.2s ease-in-out; }
+    #codea .container p.done {
+      opacity: 1; }
+
+.dark #codea h4 {
+  color: #ffa500; }
+
 nav.hide,
 footer.hide {
+  display: none; }
+
+.desktop {
   display: none; }
 
 #templates {
@@ -292,7 +371,7 @@ footer.hide {
     #editor .editor-container .editor-tools {
       height: calc(100vh - 20px);
       display: grid;
-      grid-template-rows: 8fr 1fr 1fr;
+      grid-template-rows: 9fr 1fr;
       border-radius: 5px;
       background-color: #222;
       position: sticky;
@@ -364,21 +443,8 @@ footer.hide {
                 left: 7px; }
               #editor .editor-container .editor-tools .main-tools .tools .tool .others:before {
                 left: -7px; }
-      #editor .editor-container .editor-tools .responsive {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #f6faff;
-        padding: 15px 0;
-        gap: 40px; }
-        #editor .editor-container .editor-tools .responsive .box i {
-          font-size: 25px;
-          color: #222;
-          transition: all 200ms ease-in-out;
-          cursor: pointer; }
-          #editor .editor-container .editor-tools .responsive .box i:hover {
-            color: #ffa500; }
       #editor .editor-container .editor-tools .buttons {
+        border-top: 2px solid #eee;
         display: flex;
         align-items: center;
         justify-content: center;

@@ -1,27 +1,4 @@
-import View from "./view.js";
-
-class editorView extends View {
-  _parent = document.querySelector("#editor");
-  _mainEditor = this._parent?.querySelector(".main-editor");
-  _code = this._mainEditor?.querySelector("#code");
-  _css = this._mainEditor?.querySelector("#css");
-  _cross = this._parent?.querySelector(".cross");
-  _newCSS;
-  toggleEditor = function () {
-    this._parent.classList.toggle("hide");
-  };
-  crossHandler = function (handler) {
-    this._cross?.addEventListener("click", function (e) {
-      handler();
-    });
-  };
-
-  // CODE OF THE TEMPLATES
-  // Inside of the arrays first one is html and the second one is css
-  _codes = [
-    // First ONe
-    [
-      `
+import e from"./view.js";class editorView extends e{_parent=document.querySelector("#editor");_mainEditor=this._parent?.querySelector(".main-editor");_code=this._mainEditor?.querySelector("#code");_css=this._mainEditor?.querySelector("#css");_cross=this._parent?.querySelector(".cross");_newCSS;toggleEditor=function(){this._parent.classList.toggle("hide")};crossHandler=function(e){this._cross?.addEventListener("click",function(i){e()})};_codes=[[`
       <section id="custom__1" class="grid__1">
               <div class="full__img">
                 <img src="./Extra/pro1/first.jfif" alt="" />
@@ -315,8 +292,7 @@ class editorView extends View {
                 </div>
               </div>
             </section>
-     `,
-      `
+     `,`
       * {
       padding: 0;
       margin: 0;
@@ -813,11 +789,7 @@ class editorView extends View {
     section h2{
       font-size:22px
     }
-    `,
-    ],
-    // Second one
-    [
-      `
+    `,],[`
     <main>
               <div class="container">
                 <div class="model">
@@ -848,8 +820,7 @@ class editorView extends View {
                 </div>
               </div>
             </main>
-    `,
-      `
+    `,`
     @import url('https://fonts.googleapis.com/css2?family=Hanalei+Fill&display=swap');
 
     /* Utilities */
@@ -963,11 +934,7 @@ class editorView extends View {
       color: #8925fe;
       background-color: #222;
     }
-    `,
-    ],
-    // Third One
-    [
-      `
+    `,],[`
       <nav class="py-1">
         <div class="container">
             <div class="logo">
@@ -1185,8 +1152,7 @@ class editorView extends View {
             </div>
         </div>
     </footer>
-      `,
-      `
+      `,`
       * {
   padding: 0;
   margin: 0;
@@ -1622,11 +1588,7 @@ section .lead{
         #package .container .mob-pack .plan .content .flex .cross {
           color: red; } }
 
-      `,
-    ],
-    // Fourth One
-    [
-      `
+      `,],[`
       <!-- NAVIGATION BAR -->
       <nav>
         <div class="container">
@@ -1701,8 +1663,7 @@ section .lead{
       <footer>
         <p class="lead">This site is &copy; by <span class="owner">Abdullah</span></p>
       </footer>
-      `,
-      `
+      `,`
       .container {
         display: block;
         max-width: 1140px;
@@ -1903,80 +1864,16 @@ section .lead{
         /* text-decoration: ; */
         text-decoration: underline #ccc 1px;
       }
-      `,
-    ],
-  ];
-  // GIVING THE CODE
-  templatesCode = function (index) {
-    // index is not zero based so have to subtract one from it
-    const codeArr = this._codes[index - 1];
-    this._updateEditor(codeArr[0], codeArr[1]);
-  };
-  // Update the editor
-  _updateEditor = function (html, css) {
-    this._code.innerHTML = "";
-    this._css.innerHTML = "";
-    this._code.insertAdjacentHTML("afterbegin", html);
-    this._css.insertAdjacentHTML("afterbegin", css);
-  };
-  // Clear the code from the editor
-  clearCode = function () {
-    this._code.innerHTML = "";
-    this._css.innerHTML = "";
-  };
-  // Returning the css inside the function
-  updateFontCss = function (handler) {
-    const css = this._css.innerHTML;
-    return handler(css);
-  };
-  // Updating The CSS
-  updateCSS = function (css) {
-    this._css.innerHTML = "";
-    this._css.insertAdjacentHTML("afterbegin", css);
-    // this._css.insertAdjacentHTML("beforeend", this._newCSS);
-  };
-  // Adding the css
-  addCSS = function (css) {
-    this._newCSS = css.join("\n");
-    this._css.insertAdjacentHTML("beforeend", this._newCSS);
-  };
-  // Updating the others
-  updateOthers = function (handler, other) {
-    const css = this._css.innerHTML;
-    return handler(other, css);
-  };
-  // Updating the color everytime color description is opened
-  colorDescUpdate = function (main, second) {
-    const parent = this._parent.querySelector("#select-colors");
-    main = main === "" ? "#222222" : main;
-    second = second === "" ? "#222222" : second;
-
-    const str = ` 
+      `,],];templatesCode=function(e){let i=this._codes[e-1];this._updateEditor(i[0],i[1])};_updateEditor=function(e,i){this._code.innerHTML="",this._css.innerHTML="",this._code.insertAdjacentHTML("afterbegin",e),this._css.insertAdjacentHTML("afterbegin",i),this._allCode=[e,i],console.log(this._allCode)};clearCode=function(){this._code.innerHTML="",this._css.innerHTML=""};updateFontCss=function(e){let i=this._css.innerHTML;return e(i)};updateCSS=function(e){this._css.innerHTML="",this._css.insertAdjacentHTML("afterbegin",e)};addCSS=function(e){this._newCSS=e.join("\n"),this._css.insertAdjacentHTML("beforeend",this._newCSS)};updateOthers=function(e,i){let t=this._css.innerHTML;return e(i,t)};colorDescUpdate=function(e,i){let t=this._parent.querySelector("#select-colors");e=""===e?"#222222":e,i=""===i?"#222222":i;let o=` 
               <div>
                   <h4>Main Color</h4>
-                  <input type="color" value='${main}' name="main-color" id="color" />
+                  <input type="color" value='${e}' name="main-color" id="color" />
                   </div>
               <div>
                 <h4>Primary Color</h4>
-                <input type="color" value='${second}' name="primary-color" id="color" />
+                <input type="color" value='${i}' name="primary-color" id="color" />
               </div>
-              `;
-
-    parent.insertAdjacentHTML("afterbegin", str);
-  };
-  // Calculate How many images are present
-  checkImages = function () {
-    const images = this._code.querySelectorAll("img");
-  };
-  // add images
-  addImages = function () {
-    // Selecting all the images in the code
-    const imgContain = document.querySelector("#images");
-    const images = this._code.querySelectorAll("img");
-    images.forEach((img) => {
-      imgContain.insertAdjacentHTML(
-        "beforeend",
-        `
+              `;t.insertAdjacentHTML("afterbegin",o)};checkImages=function(){this._code.querySelectorAll("img")};addImages=function(){let e=document.querySelector("#images"),i=this._code.querySelectorAll("img");i.forEach(i=>{e.insertAdjacentHTML("beforeend",`
                 <div id="image">
               <label for="url">Image Url</label>
               <input
@@ -1987,19 +1884,6 @@ section .lead{
                 placeholder="Enter URL"
               />
 
-              <img src="${img.src}" alt="" loading="lazy" />
+              <img src="${i.src}" alt="" loading="lazy" />
             </div>
-      `
-      );
-    });
-  };
-  // return url and image
-  checkImageUrl = function (handler) {
-    const images = [...this._code.querySelectorAll("img")];
-    const imagesOfDescription = [
-      ...this._parent.querySelector(".description").querySelectorAll("img"),
-    ];
-    handler(images, imagesOfDescription);
-  };
-}
-export default new editorView();
+      `)})};checkImageUrl=function(e){let i=[...this._code.querySelectorAll("img")],t=[...this._parent.querySelector(".description").querySelectorAll("img"),];e(i,t)}}export default new editorView;
